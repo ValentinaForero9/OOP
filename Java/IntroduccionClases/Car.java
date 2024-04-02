@@ -2,7 +2,7 @@ class Car {
   private String company_name;
   private String model_name;
   private int year;
-  private double mileage;
+  
 
   public String getCompany_name() {
     return company_name;
@@ -28,7 +28,5 @@ class Car {
     this.year = year;
   }
 
-  public double getMileage() {
-    return mileage;
   }
 }
