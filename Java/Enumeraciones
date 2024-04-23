@@ -1,0 +1,65 @@
+package enumeraciones;
+
+public enum Dias {
+   DOMINGO,
+   LUNES,
+   MARTES,
+   MIERCOLES,
+   JUEVES, 
+   VIERNES,
+   SABADO,
+   
+}
+
+package test;
+import enumeraciones.*;
+public class Testenumeraciones {
+
+    
+    public static void main(String[] args) {
+     System.out.println(Dias.DOMINGO);
+       System.out.println(Dias.LUNES);
+       
+        System.out.println(Continentes.AMERICA);
+         System.out.println(Continentes.AMERICA.getpaises());
+         
+          System.out.println(Continentes.EUROPA);
+         System.out.println(Continentes.EUROPA.getpaises());
+         
+          System.out.println(Continentes.AFRICA);
+         System.out.println(Continentes.AFRICA.getpaises());
+         
+          System.out.println(Continentes.ASIA);
+         System.out.println(Continentes.ASIA.getpaises());
+         
+          System.out.println(Continentes.OCEANIA);
+         System.out.println(Continentes.OCEANIA.getpaises());
+         
+         Continentes continentes = Continentes.EUROPA;
+         System.out.println(continentes.getpaises());
+        
+    }
+
+}
+
+
+
+package enumeraciones;
+
+
+public enum Continentes {
+    AFRICA(54),
+    EUROPA(50),  
+    OCEANIA(14),
+    ASIA(48),
+    AMERICA(35);
+private final int paises;
+
+private Continentes(int paises){
+this.paises = paises;
+}
+ 
+public int getpaises(){
+    return this.paises;
+}
+}
