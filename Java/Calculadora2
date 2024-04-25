@@ -70,3 +70,82 @@ public class Calculadoras {
       } 
         
          }
+package calculadoras;
+import javax.swing.JOptionPane;
+
+public class Calculadoras {
+        float x;
+        float y;
+        float r;
+
+
+        public Calculadoras(float x, float y, float r) {
+        this.x = x;
+        this.y = y;
+        this.r = r;
+        }
+        
+        public float getValores (){
+        String valorString1 = JOptionPane.showInputDialog(" Ingrese primer valor: ");
+       this.x = Float.parseFloat (valorString1); 
+        String valorString2 = JOptionPane.showInputDialog(" Ingrese segundo valor: ");
+       this.y = Float.parseFloat (valorString2);
+        return r;
+        }
+    
+      public float sumar () {
+           r = x + y;
+           return r;
+        }
+
+      public float restar() {
+           r = x - y;
+           return r;
+        }
+
+
+      public float multiplicar () {
+           r = x * y;
+           return r;
+        }
+
+
+      public float dividir () {
+           r = x/y;
+           return r;
+        }
+      
+      public static void main(String[] args) {
+          
+        Calculadoras obj1 = new Calculadoras (0,0,0);
+         
+        
+        JOptionPane.showInputDialog("""
+                                    Selecciona la operacion: 
+                                    1. Suma
+                                    2. Resta
+                                    3. Multiplicacion
+                                    4. Division 
+                                    
+                                     
+                                    
+                                    """)
+                ;
+       
+        obj1.getValores();
+        
+        obj1.sumar();
+        JOptionPane.showMessageDialog(null, "La suma es: " + obj1.r, "Resultado", JOptionPane.PLAIN_MESSAGE);
+           
+        obj1.restar();
+        JOptionPane.showMessageDialog(null, "La resta es: " + obj1.r, "Resultado", JOptionPane.PLAIN_MESSAGE);  
+        
+        obj1.multiplicar();
+        JOptionPane.showMessageDialog(null, "La multiplicacion es: " + obj1.r, "Resultado", JOptionPane.PLAIN_MESSAGE);
+        
+        obj1.dividir();
+        JOptionPane.showMessageDialog(null, "La division es: " + obj1.r, "Resultado", JOptionPane.PLAIN_MESSAGE);
+        
+      } 
+        
+         }
