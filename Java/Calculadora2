@@ -1,75 +1,4 @@
-package calculadoras;
-import javax.swing.JOptionPane;
 
-public class Calculadoras {
-        float x;
-        float y;
-        float r;
-}
-
-        public Calculadoras(float x, float y, float r) {
-        this.x = x;
-        this.y = y;
-        this.r = r;
-        }
-    
-      public float sumar () {
-      String valorString1 = JOptionPane.showInputDialog(" Ingrese primer valor: ");
-       this.x = Float.parseFloat (valorString1); 
-        String valorString2 = JOptionPane.showInputDialog(" Ingrese segundo valor: ");
-       this.y = Float.parseFloat (valorString2);
-        r = x + y;
-           return r;
-        }
-
-      public float restar() {
-      String valorString1 = JOptionPane.showInputDialog(" Ingrese primer valor: ");
-       this.x = Float.parseFloat (valorString1); 
-        String valorString2 = JOptionPane.showInputDialog(" Ingrese segundo valor: ");
-       this.y = Float.parseFloat (valorString2);
-        r = x - y;
-           return r;
-        }
-
-
-      public float multiplicar () {
-      String valorString1 = JOptionPane.showInputDialog(" Ingrese primer valor: ");
-       this.x = Float.parseFloat (valorString1); 
-        String valorString2 = JOptionPane.showInputDialog(" Ingrese segundo valor: ");
-       this.y = Float.parseFloat (valorString2);
-        r = x * y;
-           return r;
-        }
-
-
-      public float dividir () {
-      String valorString1 = JOptionPane.showInputDialog(" Ingrese primer valor: ");
-       this.x = Float.parseFloat (valorString1); 
-        String valorString2 = JOptionPane.showInputDialog(" Ingrese segundo valor: ");
-       this.y = Float.parseFloat (valorString2);
-        r = x/y;
-           return r;
-        }
-      
-      public static void main(String[] args) {
-          
-          Calculadoras obj1 = new Calculadoras (0,0,0);
-        
-        obj1.sumar();
-        JOPtionPane.showMessageDialog(null, "La suma es: " + obj1.r, "Resultado", JOptionPane.PLAIN_MESSAGE);
-           
-        obj1.restar();
-        JOPtionPane.showMessageDialog(null, "La resta es: " + obj1.r, "Resultado", JOptionPane.PLAIN_MESSAGE);  
-        
-        obj1.multiplicar();
-        JOPtionPane.showMessageDialog(null, "La multiplicacion es: " + obj1.r, "Resultado", JOptionPane.PLAIN_MESSAGE);
-        
-        obj1.dividir();
-        JOPtionPane.showMessageDialog(null, "La division es: " + obj1.r, "Resultado", JOptionPane.PLAIN_MESSAGE);
-        
-      } 
-        
-         }
 package calculadoras;
 import javax.swing.JOptionPane;
 
@@ -118,19 +47,6 @@ public class Calculadoras {
       public static void main(String[] args) {
           
         Calculadoras obj1 = new Calculadoras (0,0,0);
-         
-        
-        JOptionPane.showInputDialog("""
-                                    Selecciona la operacion: 
-                                    1. Suma
-                                    2. Resta
-                                    3. Multiplicacion
-                                    4. Division 
-                                    
-                                     
-                                    
-                                    """)
-                ;
        
         obj1.getValores();
         
